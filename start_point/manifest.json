@@ -1,0 +1,20 @@
+
+{
+  "display_name": "Ruby, Approval",
+
+  "image_name": "cyberdojofoundation/ruby_approval",
+
+  "visible_filenames": [
+    "hiker_spec.rb",
+    "hiker.rb",
+    "spec_helper.rb",
+    "hiker_life_the_universe_and_everything_has_answer.approved.txt",
+    "cyber-dojo.sh"
+  ],
+
+  "filename_extension" : [ ".rb", ".txt" ],
+
+  "runner_choice": "stateless",
+
+  "tab_size": 2
+}
