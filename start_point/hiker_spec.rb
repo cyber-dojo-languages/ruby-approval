@@ -1,6 +1,5 @@
-require './spec_helper'
-
-require './hiker'
+require_relative 'spec_helper'
+require_relative 'hiker'
 
 describe "hiker" do
   context "hhgttg" do

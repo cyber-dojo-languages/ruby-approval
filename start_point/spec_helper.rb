@@ -1,3 +1,4 @@
+require_relative 'coverage'
 require 'approvals'
 require 'approvals/rspec'
 

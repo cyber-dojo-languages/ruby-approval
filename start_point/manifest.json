@@ -8,7 +8,13 @@
     "hiker.rb",
     "spec_helper.rb",
     "hiker_hhgttg_answer.approved.txt",
-    "cyber-dojo.sh"
+    "cyber-dojo.sh",
+    "coverage.rb"
+  ],
+
+  "hidden_filenames": [
+    "coverage/\\.last_run\\.json",
+    "coverage/\\.resultset\\.json"
   ],
 
   "filename_extension" : [ ".rb", ".txt" ],
