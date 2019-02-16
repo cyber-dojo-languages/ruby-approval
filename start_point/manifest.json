@@ -20,7 +20,5 @@
 
   "filename_extension" : [ ".rb", ".txt" ],
 
-  "runner_choice": "stateless",
-
   "tab_size": 2
 }
