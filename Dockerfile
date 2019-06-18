@@ -1,4 +1,4 @@
-FROM  cyberdojofoundation/ruby
+FROM cyberdojofoundation/ruby
 LABEL maintainer=jon@jaggersoft.com
 
 RUN apk --update add --virtual build-dependencies build-base \
