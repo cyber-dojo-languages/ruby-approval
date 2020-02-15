@@ -1,7 +1,6 @@
 #!/bin/bash -Eeu
 
 apk --update add --virtual build-dependencies build-base
-echo "gem: --no-rdoc --no-ri" > ~/.gemrc
-gem install rspec approvals
+gem install rspec approvals --no-document
 apk del build-dependencies build-base
 rm -vrf /var/cache/apk/*
