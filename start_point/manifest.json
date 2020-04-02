@@ -18,7 +18,7 @@
     "\\.approvals"
   ],
 
-  "filename_extension" : [ ".rb", ".txt" ],
+  "filename_extension" : [ ".rb", ".approved.txt", ".received.txt" ],
 
   "tab_size": 2
 }
