@@ -1,2 +1,4 @@
+# turn off colour in report/coverage.txt
+export NO_COLOR=1
 # Test output can be formatted as progress or documentation
-NO_COLOR=1 rspec . --format progress
+rspec . --format progress 
