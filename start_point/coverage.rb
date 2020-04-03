@@ -2,19 +2,15 @@ require 'simplecov'
 require 'simplecov-console'
 require 'stringio'
 
-$exception_raised = false
-
 module SimpleCov
   module Formatter
     class FileWriter
       def format(result)
-        unless amber_traffic_light?
-          stdout = capture_stdout {
-            SimpleCov::Formatter::Console.new.format(result)
-          }
-          `mkdir #{report_dir} 2> /dev/null`
-          IO.write("#{report_dir}/coverage.txt", stdout)
-        end
+        stdout = capture_stdout {
+          SimpleCov::Formatter::Console.new.format(result)
+        }
+        `mkdir #{report_dir} 2> /dev/null`
+        IO.write("#{report_dir}/coverage.txt", stdout)
       end
       def amber_traffic_light?
         $exception_raised
@@ -37,12 +33,11 @@ module SimpleCov
   end
 end
 
-SimpleCov.formatter = SimpleCov::Formatter::FileWriter
-
-at_exit do
-  # Can't use SimpleCov.at_exit; when the call reaches
-  # FileWriter.format() there is no longer an exception
-  $exception_raised = true
+SimpleCov.command_name "Approval"
+SimpleCov.at_exit do
+  # Only create coverage report on green traffic-light
+  if SimpleCov.exit_status_from_exception === 0
+    SimpleCov::Formatter::FileWriter.new.format(SimpleCov.result)
+  end
 end
-
 SimpleCov.start
