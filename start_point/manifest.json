@@ -12,11 +12,5 @@
   ],
   "filename_extension" : [ ".rb", ".approved.txt", ".received.txt" ],
   "max_seconds": 10,
-  "tab_size": 2,
-  "hidden_filenames":
-  [
-    "coverage/\\.last_run\\.json",
-    "coverage/\\.resultset\\.json",
-    "\\.approvals"
-  ]
+  "tab_size": 2
 }
