@@ -11,7 +11,7 @@ function cyber_dojo_enter()
 }
 function cyber_dojo_exit()
 {
-  # 2. Remove text files we don't want returned.
+  # 2. Remove text dirs/files we don't want returned.
   cyber_dojo_delete_dirs coverage # ...
   cyber_dojo_delete_files .approvals # ...
 }
