@@ -7,7 +7,7 @@ readonly JSON=`cat ${MY_DIR}/docker/image_name.json`
 [[ ${JSON} =~ ${REGEX} ]]
 readonly IMAGE_NAME="${BASH_REMATCH[1]}"
 
-readonly EXPECTED="ruby 0.1.7"
+readonly EXPECTED="0.1.7"
 readonly ACTUAL=$(docker run --rm -i ${IMAGE_NAME} sh -c 'gem list | grep approvals')
 
 if echo "${ACTUAL}" | grep -q "${EXPECTED}"; then
